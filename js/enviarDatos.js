@@ -1,1 +1,8 @@
-export function enviarDatos(){}
+export function enviarDatos(numero,novedad){
+
+
+
+
+
+
+}

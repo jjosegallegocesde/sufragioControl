@@ -4,6 +4,8 @@ export function llenarSala(estudiantes){
 
     estudiantes.forEach((estudiante) => {
 
+        console.log()
+
         let columna=document.createElement("div")
         columna.classList.add("col")
     
@@ -30,18 +32,23 @@ export function llenarSala(estudiantes){
     
         let textoArea=document.createElement("textarea")
         textoArea.classList.add("form-control")
-        textoArea.textContent="Lorem ipsum dolor sit amet"
+        textoArea.textContent=estudiante.data().novedad
     
         let boton=document.createElement("button")
         boton.setAttribute("type","button")
         boton.classList.add("button","btn","btn-outline-primary","mx-5","my-3")
         boton.textContent="Editar"
+
+        let id=document.createElement("p")
+        id.classList.add("invisible")
+        id.textContent=estudiante._key.path.segments[6]
     
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(foto)
         tarjeta.appendChild(tituloPC)
         tarjeta.appendChild(pc)
         tarjeta.appendChild(textoArea)
+        tarjeta.appendChild(id)
         tarjeta.appendChild(boton)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
